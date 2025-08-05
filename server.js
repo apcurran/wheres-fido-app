@@ -1,5 +1,7 @@
 import express from "express";
 
+import petsRouter from "./api/routes/pets-router";
+
 const app = express();
 
 app.disable("x-powered-by");
@@ -9,6 +11,9 @@ if (process.env.DEV_DEBUG === "true") {
     const morgan = await import("morgan");
     app.use(morgan.default("dev"));
 }
+
+// API routers
+app.use("/api/pets", petsRouter);
 
 // custom 404
 app.use((req, res) => {
