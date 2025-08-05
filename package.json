@@ -1,0 +1,27 @@
+{
+    "name": "wheres-fido-app",
+    "version": "1.0.0",
+    "description": "",
+    "homepage": "https://github.com/apcurran/wheres-fido-app#readme",
+    "bugs": {
+        "url": "https://github.com/apcurran/wheres-fido-app/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/apcurran/wheres-fido-app.git"
+    },
+    "license": "ISC",
+    "author": "Alex Curran",
+    "type": "module",
+    "main": "server.js",
+    "scripts": {
+        "lint:js:check": "npx oxlint .",
+        "lint:js:write": "npx oxlint . --fix",
+        "format:check": "npx prettier . --check",
+        "format:write": "npx prettier . --write"
+    },
+    "devDependencies": {
+        "oxlint": "^1.9.0",
+        "prettier": "3.6.2"
+    }
+}
