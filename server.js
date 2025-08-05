@@ -2,6 +2,9 @@ import express from "express";
 
 const app = express();
 
+app.disable("x-powered-by");
+app.use(express.json());
+
 if (process.env.DEV_DEBUG === "true") {
     const morgan = await import("morgan");
     app.use(morgan.default("dev"));
