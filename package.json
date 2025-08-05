@@ -23,6 +23,7 @@
         "format:write": "npx prettier . --write"
     },
     "devDependencies": {
+        "morgan": "^1.10.1",
         "oxlint": "^1.9.0",
         "prettier": "3.6.2"
     },
