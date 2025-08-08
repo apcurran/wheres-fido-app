@@ -1,10 +1,14 @@
+import { getToken } from "../helpers/token-cache.js";
+
 /**
  * @typedef {import("express").RequestHandler} RequestHandler
  */
 
 /** @type {RequestHandler} */
-function getPets(req, res, next) {
+async function getPets(req, res, next) {
     try {
+        const accessToken = await getToken();
+        res.end();
     } catch (err) {
         next(err);
     }

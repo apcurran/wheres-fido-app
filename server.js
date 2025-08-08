@@ -1,6 +1,6 @@
 import express from "express";
 
-import petsRouter from "./api/routes/pets-router";
+import petsRouter from "./api/routes/pets-router.js";
 
 const app = express();
 

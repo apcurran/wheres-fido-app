@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 // import contoller
-import petsController from "../controllers/pets-controller";
+import petsController from "../controllers/pets-controller.js";
 
 // add routes
 router.get("/", petsController.getPets);
