@@ -8,7 +8,16 @@ import { getToken } from "../helpers/token-cache.js";
 async function getPets(req, res, next) {
     try {
         const accessToken = await getToken();
-        res.end();
+        const petfinderApiRequest = await fetch(
+            `${process.env.PETFINDER_BASE_URL}/animals?&page=1`,
+            {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                },
+            },
+        );
+        const petsData = await petfinderApiRequest.json();
+        res.status(200).json(petsData);
     } catch (err) {
         next(err);
     }
