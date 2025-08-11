@@ -10,9 +10,16 @@ export async function getToken() {
 
     const params = new URLSearchParams({
         grant_type: "client_credentials",
-        client_id: process.env.PETFINDER_API_KEY,
-        client_secret: process.env.PETFINDER_API_SECRET,
+        client_id: process.env.PETFINDER_API_KEY || "",
+        client_secret: process.env.PETFINDER_API_SECRET || "",
     });
+
+    if (!process.env.PETFINDER_API_KEY || !process.env.PETFINDER_API_SECRET) {
+        throw new Error(
+            "Cannot find Petfinder API variables in .env file, please check again.",
+        );
+    }
+
     const response = await fetch(
         `${process.env.PETFINDER_BASE_URL}/oauth2/token`,
         {
