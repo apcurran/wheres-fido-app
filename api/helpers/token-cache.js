@@ -44,3 +44,9 @@ export async function getToken() {
 
     return data.access_token;
 }
+
+export function clearTokenCache() {
+    tokenCache.clear();
+
+    return tokenCache.get("petfinder");
+}
