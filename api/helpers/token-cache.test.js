@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { beforeEach, describe, it } from "node:test";
 
-import { MockAgent, MockPool, setGlobalDispatcher } from "undici";
+import { MockAgent, setGlobalDispatcher } from "undici";
 
 import { getToken, clearTokenCache } from "./token-cache.js";
 
