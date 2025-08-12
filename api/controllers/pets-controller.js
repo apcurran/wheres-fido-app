@@ -9,7 +9,7 @@ async function getPets(req, res, next) {
     try {
         const accessToken = await getToken();
         const petfinderApiRequest = await fetch(
-            `${process.env.PETFINDER_BASE_URL}/animals?&page=1`,
+            `${process.env.PETFINDER_BASE_URL}/v2/animals?&page=1`,
             {
                 headers: {
                     Authorization: `Bearer ${accessToken}`,

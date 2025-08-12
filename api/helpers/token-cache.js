@@ -21,7 +21,7 @@ export async function getToken() {
     }
 
     const response = await fetch(
-        `${process.env.PETFINDER_BASE_URL}/oauth2/token`,
+        `${process.env.PETFINDER_BASE_URL}/v2/oauth2/token`,
         {
             method: "POST",
             headers: {
