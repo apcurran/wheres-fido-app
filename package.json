@@ -21,7 +21,7 @@
         "lint:js:write": "npx oxlint . --fix",
         "format:check": "npx prettier . --check",
         "format:write": "npx prettier . --write",
-        "test": "node --test"
+        "test": "node --env-file=.env --test"
     },
     "devDependencies": {
         "morgan": "^1.10.1",
