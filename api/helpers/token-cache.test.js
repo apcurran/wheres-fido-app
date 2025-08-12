@@ -5,7 +5,7 @@ import { MockAgent, MockPool, setGlobalDispatcher } from "undici";
 
 import { getToken, clearTokenCache } from "./token-cache.js";
 
-describe("getToken", { concurrency: true }, () => {
+describe("getToken", { concurrency: false }, () => {
     const apiEndpointPath = "/v2/oauth2/token";
     let myAgent;
     /** @type {import('undici').MockPool} */
@@ -60,5 +60,26 @@ describe("getToken", { concurrency: true }, () => {
             });
 
         await assert.rejects(getToken, /Petfinder API token fetch failed/);
+    });
+
+    it("refreshes the old token if the cache is stale", async () => {
+        const firstToken = "first_token";
+        const secondToken = "second_token";
+
+        // send out first req to add token to cache
+        myMockPool
+            .intercept({
+                path: apiEndpointPath,
+                method: "POST",
+            })
+            .reply(200, {
+                access_token: firstToken,
+                expires_in: 1,
+            });
+
+        const token1 = await getToken();
+        assert.equal(token1, firstToken);
+
+        // second req should create a new token since old is expired
     });
 });
