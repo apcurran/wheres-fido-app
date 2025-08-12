@@ -25,4 +25,19 @@ describe("getToken", { concurrency: true }, () => {
         setGlobalDispatcher(myAgent);
         myMockPool = myAgent.get(process.env.PETFINDER_BASE_URL);
     });
+
+    it("fetches and caches the Petfinder API token", async () => {
+        myMockPool
+            .intercept({
+                path: "/v2/oauth2/token",
+                method: "POST",
+            })
+            .reply(200, {
+                access_token: "mocked_access_token",
+                expires_in: 3600, // 1 hr in seconds
+            });
+
+        const token1 = await getToken();
+        assert.equal(token1, "mocked_access_token");
+    });
 });
