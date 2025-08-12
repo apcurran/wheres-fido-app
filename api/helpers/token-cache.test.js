@@ -27,17 +27,24 @@ describe("getToken", { concurrency: true }, () => {
     });
 
     it("fetches and caches the Petfinder API token", async () => {
+        const tokenName = "mocked_access_token";
+
         myMockPool
             .intercept({
                 path: "/v2/oauth2/token",
                 method: "POST",
             })
             .reply(200, {
-                access_token: "mocked_access_token",
+                access_token: tokenName,
                 expires_in: 3600, // 1 hr in seconds
             });
 
+        // fetch from mock
         const token1 = await getToken();
-        assert.equal(token1, "mocked_access_token");
+        assert.equal(token1, tokenName);
+
+        // should retrieve from cache
+        const token2 = await getToken();
+        assert.equal(token2, tokenName);
     });
 });
