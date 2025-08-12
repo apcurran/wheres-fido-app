@@ -59,6 +59,6 @@ describe("getToken", { concurrency: true }, () => {
                 error: "Internal error",
             });
 
-        await assert.rejects(getToken(), /Petfinder API token fetch failed/);
+        await assert.rejects(getToken, /Petfinder API token fetch failed/);
     });
 });
