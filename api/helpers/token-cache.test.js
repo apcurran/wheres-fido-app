@@ -1,11 +1,12 @@
 import assert from "node:assert/strict";
 import { beforeEach, describe, it } from "node:test";
 
-import { MockAgent, setGlobalDispatcher } from "undici";
+import { MockAgent, MockPool, setGlobalDispatcher } from "undici";
 
 import { getToken, clearTokenCache } from "./token-cache.js";
 
 describe("getToken", { concurrency: true }, () => {
+    const apiEndpointPath = "/v2/oauth2/token";
     let myAgent;
     /** @type {import('undici').MockPool} */
     let myMockPool;
@@ -31,7 +32,7 @@ describe("getToken", { concurrency: true }, () => {
 
         myMockPool
             .intercept({
-                path: "/v2/oauth2/token",
+                path: apiEndpointPath,
                 method: "POST",
             })
             .reply(200, {
@@ -46,5 +47,18 @@ describe("getToken", { concurrency: true }, () => {
         // should retrieve from cache
         const token2 = await getToken();
         assert.equal(token2, tokenName);
+    });
+
+    it("throws if the API has an error", async () => {
+        myMockPool
+            .intercept({
+                path: apiEndpointPath,
+                method: "POST",
+            })
+            .reply(500, {
+                error: "Internal error",
+            });
+
+        await assert.rejects(getToken(), /Petfinder API token fetch failed/);
     });
 });
