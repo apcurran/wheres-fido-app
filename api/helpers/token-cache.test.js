@@ -81,5 +81,32 @@ describe("getToken", { concurrency: false }, () => {
         assert.equal(token1, firstToken);
 
         // second req should create a new token since old is expired
+        myMockPool
+            .intercept({
+                path: apiEndpointPath,
+                method: "POST",
+            })
+            .reply(200, {
+                access_token: secondToken,
+                expires_in: 3600,
+            });
+
+        const token2 = await getToken();
+        assert.equal(token2, secondToken);
+    });
+
+    it("clears the token cache", async () => {
+        myMockPool
+            .intercept({
+                path: apiEndpointPath,
+                method: "POST",
+            })
+            .reply(200, {
+                access_token: "mock_token",
+                expires_in: 3600,
+            });
+
+        await getToken();
+        assert.ok(clearTokenCache() === undefined);
     });
 });
