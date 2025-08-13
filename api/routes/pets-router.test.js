@@ -19,3 +19,12 @@ describe("GET pets", () => {
         assert.ok(result.body.animals);
     });
 });
+
+describe("GET one pet", () => {
+    it("responds with specific pet data by id", async () => {
+        const petId = 77768279;
+        const result = await request(app).get(`/api/pets/${petId}`);
+        assert.strictEqual(result.status, 200);
+        assert.ok(result.body.animal);
+    });
+});
