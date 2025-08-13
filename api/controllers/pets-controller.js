@@ -29,4 +29,24 @@ async function getPets(req, res, next) {
     }
 }
 
-export default { getPets };
+/** @type {RequestHandler} */
+async function getPet(req, res, next) {
+    try {
+        const accessToken = await getToken();
+        const { id } = req.params;
+        const petfinderApiRequest = await fetch(
+            `${process.env.PETFINDER_BASE_URL}/v2/animals/${id}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                },
+            },
+        );
+        const petData = await petfinderApiRequest.json();
+        res.status(200).json(petData);
+    } catch (err) {
+        next(err);
+    }
+}
+
+export default { getPets, getPet };
