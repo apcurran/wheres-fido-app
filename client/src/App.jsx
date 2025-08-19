@@ -1,11 +1,17 @@
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
+
 import "./App.css";
 
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <div>Hello app!</div>,
+    },
+]);
+
 function App() {
-    return (
-        <>
-            <h1>Welcome to Vite</h1>
-        </>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
