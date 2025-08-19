@@ -3,5 +3,5 @@
         "correctness": "warn",
         "suspicious": "warn"
     },
-    "ignorePatterns": ["client"]
+    "ignorePatterns": ["client/"]
 }
