@@ -3,3 +3,8 @@
 ::after {
     box-sizing: border-box;
 }
+
+#root {
+    width: min(95rem, 90%);
+    margin-inline: auto;
+}
