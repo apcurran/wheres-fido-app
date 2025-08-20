@@ -1,2 +1,23 @@
 @scope (.header-nav) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+
+        list-style: none;
+    }
+
+    li a {
+        display: block;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 }
