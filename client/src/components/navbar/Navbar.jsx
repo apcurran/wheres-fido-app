@@ -12,6 +12,14 @@ function Navbar() {
                         <img src={logo} alt="Dog paw logo" />
                     </Link>
                 </div>
+                <ul>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/pets-search">Search Pets</Link>
+                    </li>
+                </ul>
             </nav>
         </header>
     );
