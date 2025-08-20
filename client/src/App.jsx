@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
 import BaseLayout from "./components/BaseLayout";
-import HomePage from "./pages/Home";
+import HomePage from "./pages/home/Home";
 import SearchPetsPage from "./pages/SearchPets";
 import PetDetailsPage from "./pages/PetDetails";
 import ErrorPage from "./pages/ErrorPage";
