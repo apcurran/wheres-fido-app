@@ -1,4 +1,4 @@
-function SearchPets() {
+function SearchPetsPage() {
     return (
         <div>
             <h1>Find Pets Page</h1>
@@ -6,4 +6,4 @@ function SearchPets() {
     );
 }
 
-export default SearchPets;
+export default SearchPetsPage;

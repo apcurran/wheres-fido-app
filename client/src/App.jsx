@@ -3,9 +3,9 @@ import { RouterProvider } from "react-router/dom";
 
 import BaseLayout from "./components/BaseLayout";
 // pages
-import Home from "./pages/Home";
-import SearchPets from "./pages/SearchPets";
-import PetDetails from "./pages/PetDetails";
+import HomePage from "./pages/Home";
+import SearchPetsPage from "./pages/SearchPets";
+import PetDetailsPage from "./pages/PetDetails";
 
 const router = createBrowserRouter([
     {
@@ -14,16 +14,16 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Home,
+                Component: HomePage,
             },
             {
                 path: "pets-search",
-                Component: SearchPets,
+                Component: SearchPetsPage,
                 // loader here for data
             },
             {
                 path: "pet",
-                Component: PetDetails,
+                Component: PetDetailsPage,
                 // loader here for data
             },
         ],

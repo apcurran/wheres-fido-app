@@ -1,4 +1,4 @@
-function PetDetails() {
+function PetDetailsPage() {
     return (
         <div>
             <h1>Pet Details Page</h1>
@@ -6,4 +6,4 @@ function PetDetails() {
     );
 }
 
-export default PetDetails;
+export default PetDetailsPage;
