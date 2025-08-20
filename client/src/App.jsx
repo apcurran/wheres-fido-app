@@ -22,7 +22,7 @@ const router = createBrowserRouter([
                 // loader here for data
             },
             {
-                path: "pet",
+                path: "pets/:id",
                 Component: PetDetailsPage,
                 // loader here for data
             },
