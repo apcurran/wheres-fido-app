@@ -4,7 +4,42 @@
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.6;
+
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
 #root {
     width: min(95rem, 90%);
     margin-inline: auto;
+}
+
+/* improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
 }
