@@ -6,13 +6,16 @@
 
     nav ul {
         display: flex;
-        gap: 1rem;
+        align-items: center;
+        gap: 2rem;
 
         list-style: none;
     }
 
     li a {
-        display: block;
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
     }
 
     .logo {
