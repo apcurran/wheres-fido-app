@@ -36,6 +36,7 @@
     .logo {
         display: flex;
         align-items: center;
+        align-self: start;
         gap: 1rem;
         padding-block: 0.5rem;
         padding-inline: 1rem;
