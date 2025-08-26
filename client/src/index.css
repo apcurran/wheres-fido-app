@@ -17,6 +17,8 @@
     --text-2xl: 3rem;
 
     --accent-color: oklch(51.1% 0.262 276.966);
+
+    --border-radius-pill: 50px;
 }
 
 body {
