@@ -1,9 +1,13 @@
+import ButtonSpecial from "../../components/button--special/ButtonSpecial";
+
+import "./Home.css";
+
 function HomePage() {
     return (
-        <div>
+        <div className="home-page-grid">
             <div className="callout">
                 <p>Search from our list of pets near your location.</p>
-                {/* special button here -- "Find Pets" text inside */}
+                <ButtonSpecial>Find Pets</ButtonSpecial>
             </div>
             <picture>
                 {/* circles SVG here */}

@@ -1,0 +1,12 @@
+@scope (.home-page-grid) {
+    .callout {
+        p {
+            margin-block-end: 1rem;
+
+            width: min(30rem, 90%);
+            text-wrap: balance;
+            font-size: var(--text-lg);
+            font-weight: 700;
+        }
+    }
+}
