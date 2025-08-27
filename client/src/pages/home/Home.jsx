@@ -1,6 +1,8 @@
 import ButtonSpecial from "../../components/button--special/ButtonSpecial";
 
 import "./Home.css";
+import DogLookingUp from "./dog-look-up__min.avif";
+import DogStaringAhead from "./hero-landing-dog__min.avif";
 
 function HomePage() {
     return (
@@ -10,12 +12,15 @@ function HomePage() {
                 <ButtonSpecial>Find Pets</ButtonSpecial>
             </div>
             <picture>
-                {/* circles SVG here */}
-                <img src="" alt="" />
+                {/* circles SVG here as before pseudo-elem */}
+                <img src={DogLookingUp} alt="Dog looking upwards" />
             </picture>
             <picture>
-                {/* blog SVG here */}
-                <img src="" alt="" />
+                <img
+                    src={DogStaringAhead}
+                    alt="Dog staring ahead at viewport"
+                    className="blob-dog-img"
+                />
             </picture>
         </div>
     );

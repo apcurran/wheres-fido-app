@@ -9,4 +9,10 @@
             font-weight: 700;
         }
     }
+
+    .blob-dog-img {
+        mask-image: url("./landing-blob-1.svg");
+        mask-repeat: no-repeat;
+        mask-position: left;
+    }
 }
