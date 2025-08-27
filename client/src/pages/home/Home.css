@@ -10,6 +10,20 @@
         }
     }
 
+    .dog-looking-up-img-container {
+        position: relative;
+        max-width: 30rem;
+
+        ::before {
+            position: absolute;
+            content: url("./circles.svg");
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
     .blob-dog-img {
         mask-image: url("./landing-blob-1.svg");
         mask-repeat: no-repeat;

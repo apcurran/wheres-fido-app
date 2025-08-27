@@ -11,10 +11,11 @@ function HomePage() {
                 <p>Search from our list of pets near your location.</p>
                 <ButtonSpecial>Find Pets</ButtonSpecial>
             </div>
-            <picture>
-                {/* circles SVG here as before pseudo-elem */}
-                <img src={DogLookingUp} alt="Dog looking upwards" />
-            </picture>
+            <div className="dog-looking-up-img-container">
+                <picture>
+                    <img src={DogLookingUp} alt="Dog looking upwards" />
+                </picture>
+            </div>
             <picture>
                 <img
                     src={DogStaringAhead}
