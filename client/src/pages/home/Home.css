@@ -1,11 +1,12 @@
 @scope (.home-page-grid) {
     :scope {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        padding-block-start: 3rem;
     }
 
     .callout {
-        grid-column: 1 / 5;
         grid-row-start: 1;
         align-self: center;
         padding-inline-start: 1rem;
@@ -20,12 +21,15 @@
         }
     }
 
-    .dog-looking-up-img-container {
-        grid-column: 2 / 5;
+    .dog-looking-up-img-container,
+    .dog-staring-ahead-picture {
         grid-row-start: 2;
+    }
 
+    .dog-looking-up-img-container {
         position: relative;
         max-width: 25rem;
+        justify-self: center;
 
         ::before {
             position: absolute;
@@ -38,9 +42,7 @@
     }
 
     .dog-staring-ahead-picture {
-        margin-block-start: 5rem;
-        grid-column: 8 / -1;
-        grid-row-start: 1;
+        align-self: start;
     }
 
     .blob-dog-img {
