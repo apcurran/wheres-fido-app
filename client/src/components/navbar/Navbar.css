@@ -44,6 +44,10 @@
         padding-inline: 1rem;
     }
 
+    .dog-paw-img {
+        width: 2rem;
+    }
+
     .logo span {
         font-size: 1.5rem;
         font-weight: bold;

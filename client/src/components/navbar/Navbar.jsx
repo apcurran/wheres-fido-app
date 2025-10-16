@@ -9,7 +9,11 @@ function Navbar() {
             <nav>
                 <Link to="/" className="logo">
                     <span>Where's Fido</span>
-                    <img src={logo} alt="Dog paw logo" />
+                    <img
+                        className="dog-paw-img"
+                        src={logo}
+                        alt="Dog paw logo"
+                    />
                 </Link>
                 <ul>
                     <li>
