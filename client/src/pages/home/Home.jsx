@@ -16,7 +16,7 @@ function HomePage() {
                     <img src={DogLookingUp} alt="Dog looking upwards" />
                 </picture>
             </div>
-            <picture>
+            <picture className="dog-staring-ahead-picture">
                 <img
                     src={DogStaringAhead}
                     alt="Dog staring ahead at viewport"
