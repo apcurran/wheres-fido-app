@@ -7,6 +7,8 @@
     .callout {
         grid-column: 1 / 5;
         grid-row-start: 1;
+        align-self: center;
+        padding-inline-start: 1rem;
 
         p {
             margin-block-end: 1rem;
