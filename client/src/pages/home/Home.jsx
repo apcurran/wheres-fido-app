@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import ButtonSpecial from "../../components/button--special/ButtonSpecial";
 
 import "./Home.css";
@@ -9,7 +11,9 @@ function HomePage() {
         <div className="home-page-grid">
             <div className="callout">
                 <p>Search from our list of pets near your location.</p>
-                <ButtonSpecial>Find Pets</ButtonSpecial>
+                <Link to="/pets-search">
+                    <ButtonSpecial>Find Pets</ButtonSpecial>
+                </Link>
             </div>
             <div className="dog-looking-up-img-container">
                 <picture>
