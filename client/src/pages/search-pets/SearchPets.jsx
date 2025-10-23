@@ -4,10 +4,13 @@ function SearchPetsPage() {
     return (
         <div className="search-pets-wrapper">
             <div className="info-group">
-                <div className="info-top"></div>
+                <div className="info-top">
+                    <h1>Ready to adopt a new pet?</h1>
+                    <p>Use our search tool to find a dog or cat best friend.</p>
+                </div>
                 <form className="info-form">
                     <div className="form-group">
-                        <label htmlFor="zip">Enter Zip Code</label>
+                        <label htmlFor="zip">Zip Code:</label>
                         <input type="number" />
                     </div>
                     <div className="form-group">
