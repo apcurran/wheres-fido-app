@@ -3,7 +3,7 @@ import { RouterProvider } from "react-router/dom";
 
 import BaseLayout from "./components/BaseLayout";
 import HomePage from "./pages/home/Home";
-import SearchPetsPage from "./pages/SearchPets";
+import SearchPetsPage from "./pages/search-pets/SearchPets";
 import PetDetailsPage from "./pages/PetDetails";
 import ErrorPage from "./pages/ErrorPage";
 
