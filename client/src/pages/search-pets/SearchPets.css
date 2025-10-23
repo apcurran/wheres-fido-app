@@ -1,0 +1,5 @@
+@scope (.search-pets-wrapper) {
+    :scope {
+        display: grid;
+    }
+}
