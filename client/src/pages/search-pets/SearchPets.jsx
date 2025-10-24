@@ -1,5 +1,9 @@
 import "./SearchPets.css";
 
+import FrenchBulldog from "./search-dog-3.jpg";
+import TwoDogs from "./search-dog-2.jpg";
+import DogOnRug from "./search-dog-1.jpg";
+
 function SearchPetsPage() {
     return (
         <div className="search-pets-wrapper">
@@ -26,6 +30,23 @@ function SearchPetsPage() {
                     </div>
                     <button className="form-submit-btn">Search</button>
                 </form>
+            </div>
+            <div className="adoption-img-group">
+                <img
+                    src={FrenchBulldog}
+                    alt="French bulldog looking ahead at camera"
+                    className="adoption-img"
+                />
+                <img
+                    src={TwoDogs}
+                    alt="Two chocolate coat dogs staring outwards"
+                    className="adoption-img"
+                />
+                <img
+                    src={DogOnRug}
+                    alt="Dog sitting by sunny window on soft, fluffy rug"
+                    className="adoption-img"
+                />
             </div>
         </div>
     );
