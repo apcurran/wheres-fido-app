@@ -1,6 +1,7 @@
 @scope (.search-pets-wrapper) {
     :scope {
         display: grid;
+        grid-template-columns: min-content 1fr;
         grid-template-areas: "info imgs";
     }
 
@@ -9,6 +10,12 @@
     }
 
     .adoption-img-group {
+        /* child property */
         grid-area: "imgs";
+
+        /* as a parent property */
+        display: grid;
+        column-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
 }
