@@ -1,5 +1,14 @@
 @scope (.search-pets-wrapper) {
     :scope {
         display: grid;
+        grid-template-areas: "info imgs";
+    }
+
+    .info-group {
+        grid-area: "info";
+    }
+
+    .adoption-img-group {
+        grid-area: "imgs";
     }
 }
