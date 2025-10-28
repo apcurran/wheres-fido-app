@@ -17,5 +17,15 @@
         display: grid;
         column-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+        img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        img:nth-child(1),
+        img:nth-child(3) {
+            margin-block-start: 30%;
+        }
     }
 }

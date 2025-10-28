@@ -19,6 +19,8 @@
     --accent-color: oklch(51.1% 0.262 276.966);
 
     --border-radius-pill: 50px;
+    --shadow-xl:
+        0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 body {
