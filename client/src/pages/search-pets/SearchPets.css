@@ -16,7 +16,7 @@
         /* as a parent property */
         display: grid;
         column-gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-columns: 1fr 1.2fr 1fr;
 
         img {
             border-radius: 20px;
@@ -25,7 +25,12 @@
 
         img:nth-child(1),
         img:nth-child(3) {
-            margin-block-start: 30%;
+            max-width: 20rem;
+            align-self: end;
+        }
+
+        img:nth-child(1) {
+            justify-self: end;
         }
     }
 }
