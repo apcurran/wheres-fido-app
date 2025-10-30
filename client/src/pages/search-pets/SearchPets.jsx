@@ -15,11 +15,14 @@ function SearchPetsPage() {
                 <form className="info-form">
                     <div className="form-group">
                         <label htmlFor="zip">Zip Code:</label>
-                        <input type="number" />
+                        <input name="zip" id="zip" type="number" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="pet-species-select">Select Pet:</label>
-                        <select name="" id="pet-species-select">
+                        <select
+                            name="pet-species-select"
+                            id="pet-species-select"
+                        >
                             <button>
                                 <selectedcontent></selectedcontent>
                             </button>
