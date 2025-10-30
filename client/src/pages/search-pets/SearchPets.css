@@ -5,13 +5,26 @@
         grid-template-areas: "info imgs";
     }
 
+    .info-top {
+        margin-block-end: 3rem;
+    }
+
+    .info-form {
+        display: flex;
+        flex-direction: column;
+
+        .form-group {
+            margin-block-end: 1rem;
+        }
+    }
+
     .info-group {
-        grid-area: "info";
+        grid-area: info;
     }
 
     .adoption-img-group {
         /* child property */
-        grid-area: "imgs";
+        grid-area: imgs;
 
         /* as a parent property */
         display: grid;
