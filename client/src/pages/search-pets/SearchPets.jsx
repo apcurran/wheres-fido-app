@@ -18,7 +18,12 @@ function SearchPetsPage() {
                         <input name="zip" id="zip" type="number" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="pet-species-select">Select Pet:</label>
+                        <label
+                            htmlFor="pet-species-select"
+                            className="visually-hidden"
+                        >
+                            Select Pet:
+                        </label>
                         <select
                             name="pet-species-select"
                             id="pet-species-select"
@@ -26,7 +31,7 @@ function SearchPetsPage() {
                             <button>
                                 <selectedcontent></selectedcontent>
                             </button>
-
+                            <option value="">Please select a pet</option>
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
                         </select>
